@@ -1,49 +1,42 @@
-telegram_bot_project/       # ریشه پروژه (همان چیزی که از گیت پول کردی)
-├── telegram_bot/           # تنظیمات اصلی جنگو (Settings, WSGI, ASGI)
-│   ├── __init__.py
-│   ├── settings.py         # [وظیفه حسن] تنظیمات دیتابیس و متغیرهای محیطی
-│   ├── urls.py             # [وظیفه مشترک] روتینگ اصلی
-│   └── ...
-├── core/                   # اپلیکیشن اصلی بک‌اند
-│   ├── migrations/
-│   ├── services/           # [وظیفه حسن] لایه سرویس‌ها و ارتباط با API تلگرام
-│   │   ├── __init__.py
-│   │   └── bot_api_client.py
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py           # [وظیفه حسن] مدل‌های دیتابیس
-│   ├── tests.py
-│   ├── urls.py             # [وظیفه حسن] روتینگ‌های داخلی اپلیکیشن
-│   └── views.py            # [مشترک] ولی اندپوینت‌های اصلی مال توست
-├── .env                    # [وظیفه حسن] فایل متغیرهای امنیتی (حتما در .gitignore باشد)
-├── .gitignore              # [وظیفه حسن] اطمینان از عدم آپلود فایل‌های حساس
-├── manage.py
-└── requirements.txt        # [وظیفه حسن] لیست پکیج‌ها
-
-telegram_bot_project/       # ریشه پروژه
-├── core/                   # ❤️ قلب تپنده پروژه (همه چیز اینجا جمع می‌شود)
-│   ├── services/           # لایه سرویس‌ها و ارتباطات خارجی
-│   │   ├── __init__.py
-│   │   ├── bot_api_client.py  # [وظیفه حسن] ارسال درخواست به تلگرام
-│   │   └── dispatcher.py      # [وظیفه ایدا] پردازش پیام‌ها و تصمیم‌گیری
-│   ├── models.py           # [وظیفه حسن] جداول دیتابیس
-│   ├── views.py            # [مشترک] دریافت وب‌هوک از تلگرام
-│   ├── urls.py             # [وظیفه حسن] آدرس‌دهی داخلی
-│   └── ...
-├── telegram_bot/           # ⚙️ اتاق فرمان (فقط تنظیمات)
-│   ├── settings.py
-│   ├── urls.py             # روتینگ اصلی که به core اشاره می‌کند
-│   └── ...
-├── manage.py
-└── requirements.txt
-
-Chat_Assistant_bot/       # ریشه پروژه (جایی که manage.py هست)
-├── telegram_bot/         # <--- پوشه تنظیمات اصلی
+Chat_Assistant_bot/
+├── telegram_bot/
 │   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
-│   └── wsgi.py           # <--- آیا این فایل اینجا وجود دارد؟
+│   ├── asgi.py
+│   └── wsgi.py
 ├── core/
+│   ├── migrations/
+│   │   ├── 0001_initial.py
+│   │   └── __init__.py
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── bot_api_client.py
+│   │   └── dispatcher.py
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── .env
+├── .gitignore
+├── db.sqlite3
+├── README.md
 ├── manage.py
-└── ...
+└── requirements.txt
+
+
+ New Update Received:
+{'business_connection_id': 'qnfONZsIkVCGAwAAUrCP-FXY8Xg', 'message_id': 157763, 'from': {'id': 8506349401, 'is_bot': False, 'first_name': 'V.boy', 'last_name': '1', 'username': 'v_boy1im', 'language_code': 'fa'}, 'chat': {'id': 8506349401, 'first_name': 'V.boy', 'last_name': '1', 'username': 'v_boy1im', 'type': 'private'}, 'date': 1787932742, 'text': 'سلام'}
+ پیام بیزنس دریافت شد | Chat ID: 8506349401 | Text: سلام
+[28/Aug/2026 19:29:13] "POST /webhook/ HTTP/1.1" 200 16
+ New Update Received:
+{'business_connection_id': 'qnfONZsIkVCGAwAAUrCP-FXY8Xg', 'message_id': 157765, 'from': {'id': 1321121247, 'is_bot': False, 'first_name': 'Ayda', 'username': 'Aydaadll', 'language_code': 'fa'}, 'chat': {'id': 1321121247, 'first_name': 'Ayda', 'username': 'Aydaadll', 'type': 'private'}, 'date': 1787932776, 'text': 'عالیه'}
+ پیام بیزنس دریافت شد | Chat ID: 1321121247 | Text: عالیه
+[28/Aug/2026 19:29:38] "POST /webhook/ HTTP/1.1" 200 16
+ New Update Received:
+{'business_connection_id': 'qnfONZsIkVCGAwAAUrCP-FXY8Xg', 'message_id': 157767, 'from': {'id': 6750512924, 'is_bot': False, 'first_name': 'V.boy', 'username': 'V_boy1', 'language_code': 'en'}, 'chat': {'id': 1321121247, 'first_name': 'Ayda', 'username': 'Aydaadll', 'type': 'private'}, 'date': 1787932795, 'text': 'بزار دارم تست میکنم'}
+ پیام بیزنس دریافت شد | Chat ID: 1321121247 | Text: بزار دارم تست میکنم
+[28/Aug/2026 19:29:58] "POST /webhook/ HTTP/1.1" 200 16
